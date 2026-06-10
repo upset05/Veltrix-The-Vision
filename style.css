@@ -1255,38 +1255,29 @@ h1, h2, h3, h4, h5 {
 
   /* Sticky Header Dynamic Island Mobile Fix */
   .navbar {
-    top: 10px;
-    padding: 10px 15px;
-    border-radius: 20px;
-    width: 92%;
+    top: 8px;
+    padding: 6px 14px;
+    border-radius: 16px;
+    width: 94%;
+  }
+
+  .logo-img {
+    width: 20px;
+    height: 20px;
   }
 
   .nav-logo .logo-text {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
   }
 
-  .nav-links {
-    display: none; /* Hide default wide desktop menu */
-  }
-
-  /* Alternatively, keep minimal navigation or allow horizontal scroll */
-  .nav-container {
-    justify-content: center;
-    gap: 15px;
-  }
-  
-  .nav-logo {
-    margin-right: auto;
-  }
-  
   .nav-links {
     display: flex;
-    gap: 12px;
+    gap: 10px;
     overflow-x: auto;
-    max-width: 65%;
+    max-width: 60%;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    padding-bottom: 2px;
+    padding-bottom: 0px;
   }
   
   .nav-links::-webkit-scrollbar {
@@ -1294,7 +1285,7 @@ h1, h2, h3, h4, h5 {
   }
 
   .nav-link {
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     white-space: nowrap;
   }
 
@@ -1323,6 +1314,11 @@ h1, h2, h3, h4, h5 {
     width: 100%;
     max-width: 300px;
     justify-content: center;
+  }
+
+  .section {
+    padding: 50px 0;
+    scroll-margin-top: 60px; /* Offset to prevent mobile header covering section titles */
   }
 
   .section-title {
