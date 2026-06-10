@@ -1,4 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // --- 0. Image Preloader ---
+  const imagesToPreload = [
+    'assets/vtu-home.png',
+    'assets/vtu-dashboard.png',
+    'assets/vtu-admin.png',
+    'assets/core-screenshots/v0.1-genesis.png',
+    'assets/core-screenshots/v0.2-awakening.png',
+    'assets/core-screenshots/v0.3-communication.png',
+    'assets/core-screenshots/v0.4-memory.png',
+    'assets/core-screenshots/v0.5-personality.png',
+    'assets/core-screenshots/v0.6-command-center.png',
+    'assets/core-screenshots/v0.7-fact-management.png',
+    'assets/core-screenshots/v0.8-modular-architecture.png',
+    'assets/core-screenshots/v0.9-knowledge-files.png',
+    'assets/core-screenshots/v0.95-productivity-natural-input.png',
+    'assets/core-screenshots/v1.0-even-dots-can-dream.png'
+  ];
+
+  imagesToPreload.forEach(src => {
+    const img = new Image();
+    img.src = src;
+  });
+
   // --- 1. Navigation Active Link Tracking ---
   const sections = document.querySelectorAll('section');
   const navLinks = document.querySelectorAll('.nav-link');
