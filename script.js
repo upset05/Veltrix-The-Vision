@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
     'assets/core-screenshots/v0.6-command-center.png',
     'assets/core-screenshots/v0.7-fact-management.png',
     'assets/core-screenshots/v0.8-modular-architecture.png',
-    'assets/core-screenshots/v0.9-knowledge-files.png',
     'assets/core-screenshots/v0.95-productivity-natural-input.png',
     'assets/core-screenshots/v1.0-even-dots-can-dream.png'
   ];
@@ -44,64 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // --- 2. Interactive Pricing Preview ---
-  const netTabs = document.querySelectorAll('.net-tab');
-  const planSelect = document.getElementById('pricing-plan');
-  const priceDisplay = document.getElementById('calc-price');
-
-  const pricingData = {
-    MTN: [
-      { text: "1GB SME (₦285)", val: 285 },
-      { text: "2GB SME (₦570)", val: 570 },
-      { text: "3GB SME (₦855)", val: 855 },
-      { text: "5GB SME (₦1425)", val: 1425 }
-    ],
-    Airtel: [
-      { text: "1GB CG (₦300)", val: 300 },
-      { text: "2GB CG (₦600)", val: 600 },
-      { text: "5GB CG (₦1500)", val: 1500 }
-    ],
-    Glo: [
-      { text: "1GB CG (₦290)", val: 290 },
-      { text: "2GB CG (₦580)", val: 580 }
-    ],
-    "9Mobile": [
-      { text: "1GB CG (₦280)", val: 280 },
-      { text: "2GB CG (₦560)", val: 560 }
-    ]
-  };
-
-  const updatePlans = (network) => {
-    if (planSelect && priceDisplay) {
-      planSelect.innerHTML = '';
-      const plans = pricingData[network];
-      plans.forEach(plan => {
-        const opt = document.createElement('option');
-        opt.value = plan.val;
-        opt.textContent = plan.text;
-        planSelect.appendChild(opt);
-      });
-      priceDisplay.textContent = `₦${plans[0].val}`;
-    }
-  };
-
-  if (netTabs.length > 0) {
-    netTabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        netTabs.forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
-        updatePlans(tab.getAttribute('data-network'));
-      });
-    });
-  }
-
-  if (planSelect && priceDisplay) {
-    planSelect.addEventListener('change', (e) => {
-      priceDisplay.textContent = `₦${e.target.value}`;
-    });
-  }
-
-  // --- 3. Veltrix Core Timeline Slider ---
+  // --- 2. Veltrix Core Timeline Slider ---
   const timelineSteps = document.querySelectorAll('.timeline-step');
   const activeVersionTitle = document.getElementById('active-version-title');
   const activeScreenshot = document.getElementById('active-screenshot');
@@ -135,38 +77,32 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     'v0.5': {
       title: 'v0.5 - Knowledge',
-      img: 'assets/core-screenshots/v0.5-personality.png', // Fallback path if missing
-      descTitle: 'Knowledge Categories',
+      img: 'assets/core-screenshots/v0.5-personality.png',
+      descTitle: 'Knowledge Engine',
       desc: 'Loading and formatting categories of knowledge (identity, anime, personal facts, business principles).'
     },
     'v0.6': {
       title: 'v0.6 - Personality',
-      img: 'assets/core-screenshots/v0.6-command-center.png', // Fallback path if missing
-      descTitle: 'Personality Engine & Themes',
+      img: 'assets/core-screenshots/v0.6-command-center.png',
+      descTitle: 'Mood and State System',
       desc: 'A core mood selector and visual color theme generator. The user can switch Core skin and color states.'
     },
     'v0.7': {
       title: 'v0.7 - Fact Management',
       img: 'assets/core-screenshots/v0.7-fact-management.png',
-      descTitle: 'Fact Processing',
+      descTitle: 'Learning and Recall',
       desc: 'Enables interactive learning. Core can learn new user facts dynamically via commands, list learned keys, export reports, and forget facts.'
     },
     'v0.8': {
       title: 'v0.8 - Modular Core',
       img: 'assets/core-screenshots/v0.8-modular-architecture.png',
-      descTitle: 'Architecture Modernization',
+      descTitle: 'Project Refactor',
       desc: 'Code refactored out of a single monolith into clean, modular JS files for memory, commands, identity, themes, and application wiring.'
-    },
-    'v0.9': {
-      title: 'v0.9 - Knowledge Files',
-      img: 'assets/core-screenshots/v0.9-knowledge-files.png',
-      descTitle: 'Dynamic Knowledge Files',
-      desc: 'Core loads structure definitions from external JSON databases (anime, personal, business) dynamically, and stores session overrides.'
     },
     'v0.95': {
       title: 'v0.95 - Productivity',
       img: 'assets/core-screenshots/v0.95-productivity-natural-input.png',
-      descTitle: 'Productivity Suite & Natural Input',
+      descTitle: 'Notes, Tasks and Search',
       desc: 'Adds notes storage, task completion tracking, global memory search capabilities, and natural voice/text command mapping.'
     },
     'v1.0': {
@@ -192,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // --- 4. Interactive Core Terminal Sandbox ---
+  // --- 3. Interactive Core Terminal Sandbox ---
   const termBody = document.getElementById('term-body');
   const termInput = document.getElementById('term-input');
 
@@ -334,25 +270,7 @@ Active Mood: ${currentMood}`);
     });
   }
 
-  // --- 5. VTU View Toggle (Pricing vs Screenshots) ---
-  const vtuToggleBtns = document.querySelectorAll('.vtu-toggle-btn');
-  const vtuTabContents = document.querySelectorAll('.vtu-tab-content');
-
-  vtuToggleBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      vtuToggleBtns.forEach(b => b.classList.remove('active'));
-      vtuTabContents.forEach(c => c.classList.remove('active'));
-
-      btn.classList.add('active');
-      const viewId = `vtu-${btn.getAttribute('data-vtu-view')}-view`;
-      const targetContent = document.getElementById(viewId);
-      if (targetContent) {
-        targetContent.classList.add('active');
-      }
-    });
-  });
-
-  // --- 6. VTU Live Gallery Controls ---
+  // --- 4. VTU Live Gallery Controls ---
   const galleryImg = document.getElementById('gallery-img');
   const galleryDots = document.querySelectorAll('.gallery-dot');
 
