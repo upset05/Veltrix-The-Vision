@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veltrix Ecosystem — The Vision</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Styling -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Ambient Glow Background -->
+    <div class="glow-bg">
+        <div class="glow-sphere glow-1"></div>
+        <div class="glow-sphere glow-2"></div>
+        <div class="glow-sphere glow-3"></div>
+    </div>
+
+    <!-- Floating Dynamic Island Header -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="assets/veltrix_logo.png" alt="Veltrix Logo" class="logo-img">
+                <span class="logo-text">VELTRIX</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#vtu" class="nav-link">Veltrix VTU</a>
+                <a href="#core" class="nav-link">Veltrix Core</a>
+                <a href="#simulator" class="nav-link">Simulator</a>
+                <a href="#roadmap" class="nav-link">Roadmap</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="container">
+            <div class="badge">VELTRIX DIGITAL ECOSYSTEM</div>
+            <h1 class="hero-title">
+                Building the Future,<br>
+                <span class="gradient-text">Version by Version.</span>
+            </h1>
+            <p class="hero-desc">
+                A unified suite of intelligent systems and fintech platforms. Explore Veltrix VTU, Veltrix Core, and the future roadmap towards a fully integrated mobile ecosystem.
+            </p>
+            <div class="hero-ctas">
+                <a href="#vtu" class="btn btn-primary">Fintech Platform</a>
+                <a href="#core" class="btn btn-secondary">AI Core Engine</a>
+                <a href="#roadmap" class="btn btn-accent">Explore Roadmap</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Veltrix VTU Section (Redesigned Bento Grid with Device Mockup) -->
+    <section id="vtu" class="section vtu-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag text-primary">Stage 01 — Completed</span>
+                <h2 class="section-title">Veltrix VTU Showcase</h2>
+                <p class="section-desc">Nigeria's premier student-first telecommunications and digital top-up platform. Delivers data, airtime, and rewards instantly on campus.</p>
+            </div>
+
+            <!-- Redesigned 2-Column Spacious Layout -->
+            <div class="vtu-showcase-grid">
+                
+                <!-- Left Column: Detailed Feature Breakdown -->
+                <div class="vtu-details-col glass-container">
+                    <div class="vtu-detail-group">
+                        <div class="vtu-group-header">
+                            <span class="feat-badge badge-security">🔒 SECURITY SYSTEM</span>
+                            <h3>Bank-Grade User Protection</h3>
+                        </div>
+                        <p class="vtu-group-desc">
+                            Veltrix is engineered around strict security protocols to safeguard user funds and sensitive information:
+                        </p>
+                        <ul class="vtu-details-list">
+                            <li><strong>Secure Authentication:</strong> Fully encrypted user sign-up and sign-in pipelines utilizing modern hashing and session token verification.</li>
+                            <li><strong>4-Digit Transaction PIN:</strong> A dedicated secondary security layer. Every purchase, transfer, or wallet debit requires confirmation of a custom PIN.</li>
+                            <li><strong>Paystack Integration:</strong> Financial transactions are processed securely via Paystack, utilizing SSL encryption and a flat ₦50 fee structure to minimize campus overhead.</li>
+                        </ul>
+                    </div>
+
+                    <div class="vtu-detail-group">
+                        <div class="vtu-group-header">
+                            <span class="feat-badge badge-admin">💼 ADMINISTRATIVE PORTAL</span>
+                            <h3>Ecosystem Control & Logs</h3>
+                        </div>
+                        <p class="vtu-group-desc">
+                            The platform includes an administrative control center allowing managers to track and moderate system-wide processes:
+                        </p>
+                        <ul class="vtu-details-list">
+                            <li><strong>Transaction Tracking:</strong> Real-time auditing of all airtime, data, and funding transactions with automated status checks.</li>
+                            <li><strong>User Directory & Management:</strong> Access list controls, credit balances, reset transaction PINs, and update user permission scopes.</li>
+                            <li><strong>Provider API Administration:</strong> Dynamically monitor network service provider API balances, toggle data bundle availabilities, and track response latency.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Right Column: High Visibility Browser Mockup -->
+                <div class="vtu-browser-col glass-container">
+                    <h3 class="bento-card-title">Platform Interface Showcase</h3>
+                    <p class="bento-card-subtitle">Live high-visibility screen captures of veltrix.com.ng</p>
+                    
+                    <!-- Browser Window Mockup -->
+                    <div class="browser-mockup">
+                        <div class="browser-header">
+                            <div class="browser-dots">
+                                <span class="b-dot red"></span>
+                                <span class="b-dot yellow"></span>
+                                <span class="b-dot green"></span>
+                            </div>
+                            <div class="browser-address">https://veltrix.com.ng</div>
+                        </div>
+                        <div class="browser-screen">
+                            <img src="assets/vtu-home.png" id="gallery-img" alt="Veltrix VTU Portal" class="browser-screenshot">
+                        </div>
+                    </div>
+
+                    <!-- Gallery Controls (Larger & More Distinct) -->
+                    <div class="gallery-controls">
+                        <button class="gallery-dot active" data-img="assets/vtu-home.png" data-alt="Veltrix VTU Homepage">Homepage View</button>
+                        <button class="gallery-dot" data-img="assets/vtu-dashboard.png" data-alt="Veltrix VTU User Dashboard">User Dashboard</button>
+                        <button class="gallery-dot" data-img="assets/vtu-admin.png" data-alt="Veltrix VTU Admin Panel">Admin Control Panel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Veltrix Core Evolution Section -->
+    <section id="core" class="section core-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag text-purple">Stage 02 — Active Development</span>
+                <h2 class="section-title">Veltrix Core</h2>
+                <p class="section-desc">A local personal and business intelligence engine. What began as a pulsing white dot on a black screen evolved into a modular, learning assistant with persistent memory.</p>
+            </div>
+
+            <!-- Evolution Timeline Viewer -->
+            <div class="timeline-viewer">
+                <div class="timeline-sidebar">
+                    <div class="timeline-steps">
+                        <button class="timeline-step active" data-version="v0.1" data-title="Genesis" data-desc="A single white dot centered on a black screen representing potential.">v0.1</button>
+                        <button class="timeline-step" data-version="v0.2" data-title="Awakening" data-desc="The core wakes up. Dot becomes interactive, expanding into a command panel.">v0.2</button>
+                        <button class="timeline-step" data-version="v0.3" data-title="Communication" data-desc="Basic command parser and registry module allowing input/output.">v0.3</button>
+                        <button class="timeline-step" data-version="v0.4" data-title="Memory" data-desc="Session memory and persistent localStorage memory integration.">v0.4</button>
+                        <button class="timeline-step" data-version="v0.5" data-title="Knowledge" data-desc="Merged knowledge base system and category loader loaded.">v0.5</button>
+                        <button class="timeline-step" data-version="v0.6" data-title="Personality" data-desc="Mood system, theme setting, and initial learning capabilities.">v0.6</button>
+                        <button class="timeline-step" data-version="v0.7" data-title="Fact Management" data-desc="Command verification for facts, deletion and exporting of facts.">v0.7</button>
+                        <button class="timeline-step" data-version="v0.8" data-title="Modular Core" data-desc="Monolithic script refactored into modular JS files (memory, knowledge, themes, etc).">v0.8</button>
+                        <button class="timeline-step" data-version="v0.9" data-title="Knowledge Files" data-desc="Identity loading through separate category JSON files.">v0.9</button>
+                        <button class="timeline-step" data-version="v0.95" data-title="Productivity" data-desc="Notes, Task tracking, and memory search capabilities added.">v0.95</button>
+                        <button class="timeline-step" data-version="v1.0" data-title="Even Dots Can Dream" data-desc="The official Alpha release, integrating modular systems and full helper docs.">v1.0</button>
+                    </div>
+                </div>
+
+                <div class="timeline-content">
+                    <div class="screenshot-box glass-container">
+                        <div class="screenshot-header">
+                            <span class="dot-indicator"></span>
+                            <span class="screenshot-title" id="active-version-title">v0.1 - Genesis</span>
+                        </div>
+                        <div class="screenshot-body">
+                            <img src="assets/core-screenshots/v0.1-genesis.png" id="active-screenshot" alt="Veltrix Core v0.1" class="screenshot-img">
+                        </div>
+                    </div>
+                    <div class="version-details">
+                        <h3 id="active-details-title">Genesis</h3>
+                        <p id="active-details-desc">A single white dot centered on a black screen representing potential.</p>
+                        <div class="changelog-badge">Verified Alpha Stable</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Simulator Section (Kept dark console layout for contrast) -->
+    <section id="simulator" class="section simulator-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag text-emerald">Live Engine Sandbox</span>
+                <h2 class="section-title">Test the Core</h2>
+                <p class="section-desc">Interact with a simulated Veltrix Core directly from this presentation. Type help to see available commands.</p>
+            </div>
+
+            <!-- Mock Terminal Simulator -->
+            <div class="terminal-container">
+                <div class="terminal-header">
+                    <div class="window-dots">
+                        <span class="w-dot red"></span>
+                        <span class="w-dot yellow"></span>
+                        <span class="w-dot green"></span>
+                    </div>
+                    <span class="terminal-title">VELTRIX CORE TERMINAL (v1.0)</span>
+                    <span class="terminal-status">ONLINE</span>
+                </div>
+                <div class="terminal-body" id="term-body">
+                    <p class="term-line">[BOOT] Initializing Systems...</p>
+                    <p class="term-line">Loading Memory... (0 entries found)</p>
+                    <p class="term-line">Loading Knowledge... (5 categories loaded)</p>
+                    <p class="term-line text-emerald">Veltrix Core Online. Type hello to begin.</p>
+                </div>
+                <div class="terminal-input-row">
+                    <span class="term-prompt">&gt;</span>
+                    <input type="text" id="term-input" placeholder="Talk to core (hello, /about, /status, /release, /help)..." autocomplete="off">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap Section -->
+    <section id="roadmap" class="section roadmap-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag text-accent">Evolution Roadmap</span>
+                <h2 class="section-title">Veltrix Ecosystem Roadmap</h2>
+                <p class="section-desc">From single transactional tools to ambient, context-aware user assistants. Discover how Veltrix scales into a complete ecosystem.</p>
+            </div>
+
+            <div class="roadmap-timeline">
+                
+                <!-- Stage 1 -->
+                <div class="roadmap-card border-emerald">
+                    <div class="roadmap-header">
+                        <span class="stage-num text-emerald">Stage 01</span>
+                        <span class="status-label status-built">Built / Operational</span>
+                    </div>
+                    <h3 class="roadmap-stage-title">Veltrix VTU</h3>
+                    <p class="roadmap-desc">
+                        A telecommunications platform for data and airtime purchase with user authentication, wallet funding, Paystack integration, database management, transaction tracking, provider API integration, and admin operations.
+                    </p>
+                </div>
+
+                <!-- Stage 2 -->
+                <div class="roadmap-card border-purple">
+                    <div class="roadmap-header">
+                        <span class="stage-num text-purple">Stage 02</span>
+                        <span class="status-label status-active">Active Development</span>
+                    </div>
+                    <h3 class="roadmap-stage-title">Veltrix Core</h3>
+                    <p class="roadmap-desc">
+                        An AI-powered personal/business intelligence system that started as a white dot on a black background and evolved into memory, knowledge, learning, personality, tasks, notes, fact management, themes, reports, and modular architecture.
+                    </p>
+                    <div class="vision-box bg-purple-trans">
+                        <h4>Long-term Core Vision:</h4>
+                        <p>Core will eventually become a supervised AI assistant that can:</p>
+                        <ul>
+                            <li>Learn from connected information sources</li>
+                            <li>Access the internet for research</li>
+                            <li>Read and organize files</li>
+                            <li>Suggest improvements to itself and projects</li>
+                            <li>Assist with coding and planning</li>
+                            <li>Access computer-level tools only with user supervision</li>
+                            <li>Never perform major actions without user approval</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Stage 3 -->
+                <div class="roadmap-card border-blue">
+                    <div class="roadmap-header">
+                        <span class="stage-num text-blue">Stage 03</span>
+                        <span class="status-label status-planned">Planned</span>
+                    </div>
+                    <h3 class="roadmap-stage-title">Veltrix Studio</h3>
+                    <p class="roadmap-desc">
+                        An AI-powered website builder and digital creation platform that can generate websites, landing pages, business pages, templates, content structures, and visual layouts.
+                    </p>
+                    <div class="vision-box bg-blue-trans">
+                        <h4>Studio Vision:</h4>
+                        <ul>
+                            <li>AI-generated website templates & copy generation</li>
+                            <li>Industry-based website builders</li>
+                            <li>Layout customization & deployment-ready output</li>
+                            <li>Seamless integration with Veltrix Core</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Stage 4 -->
+                <div class="roadmap-card border-orange">
+                    <div class="roadmap-header">
+                        <span class="stage-num text-orange">Stage 04</span>
+                        <span class="status-label status-longterm">Long-Term Vision</span>
+                    </div>
+                    <h3 class="roadmap-stage-title">Veltrix OS</h3>
+                    <p class="roadmap-desc">
+                        A custom Android-based operating system designed for mobile devices, centered around AI assistance, personalization, productivity, and supervised control.
+                    </p>
+                    <div class="vision-box bg-orange-trans">
+                        <h4>OS Vision:</h4>
+                        <ul>
+                            <li>Android-based custom OS built for phones/devices</li>
+                            <li>Core as the central intelligence layer inside the OS</li>
+                            <li>AI-assisted phone experience & personal dashboard</li>
+                            <li>App/workflow automation & user preferences memory</li>
+                            <li>Supervised AI actions with strict user approval</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vision Quote & Footer Message -->
+            <div class="roadmap-footer-box text-center">
+                <p class="dots-dream-quote">“Even dots can dream.”</p>
+                <p class="closing-message">From VTU infrastructure to intelligent systems, Veltrix is being built version by version into a connected digital ecosystem.</p>
+                <div class="ppt-download-wrapper">
+                    <a href="Veltrix_the_Vision_Presentation.pptx" class="btn btn-primary btn-ppt">
+                        <svg class="ppt-icon" viewBox="0 0 24 24" width="18" height="18">
+                            <path fill="currentColor" d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                        </svg>
+                        Download PowerPoint Deck
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p>&copy; 2026 Veltrix Ecosystem. All rights reserved.</p>
+            <p class="creator-credit">Designed & Crafted by The Accountant & Antigravity</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
