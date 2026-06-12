@@ -39,6 +39,11 @@ document.addEventListener('DOMContentLoaded', () => {
       link.classList.remove('active');
       if (link.getAttribute('href').slice(1) === current) {
         link.classList.add('active');
+        if (window.innerWidth <= 768 && link.parentElement) {
+          const navScroller = link.parentElement;
+          const centeredLeft = link.offsetLeft - ((navScroller.clientWidth - link.clientWidth) / 2);
+          navScroller.scrollTo({ left: centeredLeft, behavior: 'auto' });
+        }
       }
     });
   });
